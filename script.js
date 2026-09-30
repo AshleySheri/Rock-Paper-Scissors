@@ -4,6 +4,9 @@ const gameChoices = "Rock,Paper,Scissors";
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
+let humanScore = 0;
+let computerScore = 0;
+
 
 function getComputerChoice(){ 
     // 1. Separate the strings inside of the variable ("options" could've been named anything)
@@ -48,7 +51,7 @@ console.log(humanSelection);
 // You do not need to handle reprompting if the user enters an invalid input, as that would require things we will teach later. For now, just assume the user will always enter a valid choice.
 // Test what your function returns by using console.log.
 
-// --------------------- 
+// --------------------- DONE
 // Step 4: Declare the players score variables
 // Your game will keep track of the players score. You will write variables to keep track of the players score.
 
