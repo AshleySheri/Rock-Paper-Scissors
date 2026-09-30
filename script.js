@@ -1,28 +1,29 @@
 
 
 const gameChoices = "Rock,Paper,Scissors";
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
 
 
-function getComputerChoice(options){ 
+function getComputerChoice(){ 
     // 1. Separate the strings inside of the variable ("options" could've been named anything)
-    const singleChoice = options.split(","); 
+    const singleChoice = gameChoices.split(","); 
     // 2. Create a randomizer within the length of the variable that has been split
     const randomIndex = Math.floor(Math.random() * singleChoice.length); 
     //Randomly return "Rock", "Paper", or "Scissors"
     return singleChoice[randomIndex];
 }
-console.log(getComputerChoice(gameChoices));
+console.log(computerSelection);
 
 function getHumanChoice(){
     let answer = prompt("Choose your weopon: Rock, Paper, or Scissors? ")
     return answer;
 }
-
-
-const humanSelection = getHumanChoice();
-// const computerSelection = getComputerChoice();
-
 console.log(humanSelection);
+
+
+
+
 
 
 
