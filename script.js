@@ -14,8 +14,11 @@ function getComputerChoice(options){
 console.log(getComputerChoice(gameChoices));
 
 function getHumanChoice(){
-    // let answer = prompt("Choose your Weapon:")
+    let answer = prompt("Choose your weapon: Rock, Paper, or Scissors?", userInput);
+    
 }
+console.log(prompt("Choose your weapon: Rock, Paper, or Scissors?"));
+
 
 
 
@@ -30,7 +33,7 @@ function getHumanChoice(){
 // Note: Some learners might think that arrays are necessary for this problem, but they aren’t. If you’re unfamiliar with arrays, don’t worry - they’ll be covered later in the curriculum.
 // Test that your function returns what you expect using console.log or the browser developer tools before advancing to the next step.
 
-
+// --------------------- DONE
 // Step 3: Write the logic to get the human choice
 // Your game will be played by a human player. You will write a function that takes the user choice and returns it.
 
@@ -39,6 +42,8 @@ function getHumanChoice(){
 // Hint: Use the prompt method to get the user’s input.
 // You do not need to handle reprompting if the user enters an invalid input, as that would require things we will teach later. For now, just assume the user will always enter a valid choice.
 // Test what your function returns by using console.log.
+
+
 // Step 4: Declare the players score variables
 // Your game will keep track of the players score. You will write variables to keep track of the players score.
 
