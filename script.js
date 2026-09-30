@@ -14,11 +14,15 @@ function getComputerChoice(options){
 console.log(getComputerChoice(gameChoices));
 
 function getHumanChoice(){
-    let answer = prompt("Choose your weapon: Rock, Paper, or Scissors?", userInput);
-    
+    let answer = prompt("Choose your weopon: Rock, Paper, or Scissors? ")
+    return answer;
 }
-console.log(prompt("Choose your weapon: Rock, Paper, or Scissors?"));
 
+
+const humanSelection = getHumanChoice();
+// const computerSelection = getComputerChoice();
+
+console.log(humanSelection);
 
 
 
@@ -43,12 +47,14 @@ console.log(prompt("Choose your weapon: Rock, Paper, or Scissors?"));
 // You do not need to handle reprompting if the user enters an invalid input, as that would require things we will teach later. For now, just assume the user will always enter a valid choice.
 // Test what your function returns by using console.log.
 
-
+// --------------------- 
 // Step 4: Declare the players score variables
 // Your game will keep track of the players score. You will write variables to keep track of the players score.
 
 // Create two new variables named humanScore and computerScore in the global scope.
 // Initialize those variables with the value of 0.
+
+// --------------------- 
 // Step 5: Write the logic to play a single round
 // Your game will be played round by round. You will write a function that takes the human and computer player choices as arguments, plays a single round, increments the round winner’s score and logs a winner announcement.
 
@@ -58,6 +64,7 @@ console.log(prompt("Choose your weapon: Rock, Paper, or Scissors?"));
 // Write the code for your playRound function to console.log a string value representing the round winner, such as: “You lose! Paper beats Rock”.
 // Increment the humanScore or computerScore variable based on the round winner.
 
+// --------------------- 
 // Step 6: Write the logic to play the entire game
 // Your game will play 5 rounds. You will write a function named playGame that calls playRound to play 5 rounds, keeps track of the scores and declares a winner at the end.
             // function playRound(humanChoice, computerChoice) {
