@@ -7,7 +7,7 @@ const rounds = 5;
 function getComputerChoice(){ 
     const singleChoice = gameChoices.split(","); 
     const randomize = Math.floor(Math.random() * singleChoice.length); 
-    return singleChoice[randomize];
+    return singleChoice[randomize].toLowerCase();
 }
 
 function getHumanChoice(){
