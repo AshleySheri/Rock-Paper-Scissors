@@ -1,13 +1,13 @@
 let humanScore = 0;
 let computerScore = 0;
 
-const gameChoices = "Rock,Paper,Scissors";
+const gameChoices = "rock,paper,scissors";
 const rounds = 5;
 
 function getComputerChoice(){ 
     const singleChoice = gameChoices.split(","); 
     const randomize = Math.floor(Math.random() * singleChoice.length); 
-    return singleChoice[randomize].toLowerCase();
+    return singleChoice[randomize];
 }
 
 function getHumanChoice(){
@@ -17,6 +17,10 @@ function getHumanChoice(){
 
         
 function playRound( humanChoice, computerChoice) {
+    if (humanChoice === computerChoice) {
+        console.log("It's a Tie!");
+        return;
+    }
     
     const computerWins = 
     (humanChoice === "rock" && computerChoice === "paper") ||
@@ -25,16 +29,12 @@ function playRound( humanChoice, computerChoice) {
     
     if (computerWins) {
         computerScore++
-            console.log(`You Lose! ${computerChoice} beats ${humanChoice}`);
-        } else {
-            humanScore++
-            console.log(`You Win! ${humanChoice} beats ${computerChoice}`);
-        }
-       
-    if (humanChoice === computerChoice) {
-        console.log("It's a Tie!");
-        return;
-    } 
+        console.log(`You Lose! ${computerChoice} beats ${humanChoice}`);
+    } else {
+        humanScore++
+        console.log(`You Win! ${humanChoice} beats ${computerChoice}`);
+    }
+            
 }
  
 
@@ -49,7 +49,10 @@ function playGame() {
         playRound(humanChoice, computerChoice);
     }
 
-    const finalScore = humanScore > computerScore ? console.log("Game Over! You Won! " + humanScore + " to " + computerScore) : console.log("Game Over! You Lost! " + humanScore + " to " + computerScore);
+    const finalScore = 
+        humanScore === computerScore ? console.log("It's a tie. No winners here.") 
+       : humanScore > computerScore ? console.log("Game Over. YOU WON!!! You: " + humanScore + " Computer: " + computerScore) 
+       : console.log("Game Over. You Lost. You: " +  humanScore + " Computer: " + computerScore) ;
     
     console.log(finalScore);
 }
